@@ -2,9 +2,10 @@
 def chkPalindrome(value):
     end = len(value)-1
     for i in range(int(len(value)/2)):
-        if value[i] == value[end]:
-            return True
+        if value[i] != value[end]:
+            return False
         end = end - 1
+    return True
 
 def main():
     print("Enter a string :")
